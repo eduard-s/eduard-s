@@ -1,4 +1,4 @@
-# Hi, I'm Eduard 👋
+# Hi, I am Eduard 👋
 
 **Software development · Applied AI · Science**
 
@@ -14,6 +14,7 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 
 | Repository | What it does |
 | --- | --- |
+| [TableProof](https://github.com/eduard-s/table-proof) | Python audits for PDF table associations, with source evidence, an optional local vision model, and reproducible regression cases. |
 | [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Finds input, result, and error mismatches across MCP and AI SDK tool paths. It has Python and Node.js packages. |
 | [Workflow engine: Python services](https://github.com/eduard-s/event-driven-workflow-orchestration-engine) | Runs parallel JSON workflows with an API, orchestrator, workers, PostgreSQL, and Redis Streams. |
 | [Workflow engine: Go monolith](https://github.com/eduard-s/event-driven-workflow-orchestration-engine-monolith) | Runs durable JSON workflows in one Go app with PostgreSQL, retries, and recovery. |
@@ -23,3 +24,9 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 ## Try ToolBoundary
 
 [Python on PyPI](https://pypi.org/project/tool-boundary-py/) · [Node.js on npm](https://www.npmjs.com/package/@esmirnov.ai/tool-boundary) · [Examples and explanation](https://esmirnov.ai/blog/tool-boundary/)
+
+## Try TableProof
+
+[Source installation and example](https://github.com/eduard-s/table-proof#try-the-real-regression-case) · [Benchmark evidence](https://github.com/eduard-s/table-proof/blob/main/benchmarks/README.md) · [MVP plan](https://github.com/eduard-s/table-proof/blob/main/docs/MVP_PLAN.md)
+
+TableProof is an alpha library. It compares extracted cells with source evidence and reports uncertain cases. PyPI publication is deferred.
