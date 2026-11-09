@@ -14,6 +14,7 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 
 | Repository | What it does |
 | --- | --- |
+| [TinyTask](https://github.com/eduard-s/tiny-task) | Trains local text classifiers and evaluates accepted accuracy, coverage, and unknown requests. It includes a CSV inbox demo and an optional SetFit backend. |
 | [Nematic game](https://github.com/eduard-s/nematic-game) | A React component and web app for a 2D material model. It has liquid crystals, ions, fields, and local brushes. |
 | [TableProof](https://github.com/eduard-s/table-proof) | Python audits for PDF table associations, with source evidence, an optional local vision model, and reproducible regression cases. |
 | [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Finds input, result, and error mismatches across MCP and AI SDK tool paths. It has Python and Node.js packages. |
@@ -21,6 +22,12 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 | [Workflow engine: Go monolith](https://github.com/eduard-s/event-driven-workflow-orchestration-engine-monolith) | Runs durable JSON workflows in one Go app with PostgreSQL, retries, and recovery. |
 | [Workflow engine: LangGraph monolith](https://github.com/eduard-s/event-driven-workflow-orchestration-engine-monolith-langgraph) | Runs JSON workflows with FastAPI and LangGraph. PostgreSQL stores state and checkpoints. |
 | [Skills](https://github.com/eduard-s/skills) | Reusable Markdown skills for AI assistants. The first skill examines evidence for everyday science questions. |
+
+## Use TinyTask
+
+[Source installation and demo](https://github.com/eduard-s/tiny-task#try-the-support-inbox) · [Comparison with Prompt2Model and SetFit](https://github.com/eduard-s/tiny-task/blob/main/docs/COMPARISON.md) · [MVP plan](https://github.com/eduard-s/tiny-task/blob/main/docs/MVP_PLAN.md)
+
+TinyTask is a source alpha. It trains a classifier for a stable label set and routes uncertain requests to review. Its acceptance report helps examine a local candidate before deployment.
 
 ## Use Nematic game
 
