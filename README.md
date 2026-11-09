@@ -14,10 +14,10 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 
 | Repository | What it does |
 | --- | --- |
-| [TinyTask](https://github.com/eduard-s/tiny-task) | Trains local text classifiers and evaluates accepted accuracy, coverage, and unknown requests. It includes a CSV inbox demo and an optional SetFit backend. |
-| [Nematic game](https://github.com/eduard-s/nematic-game) | A React component and web app for a 2D material model. It has liquid crystals, ions, fields, and local brushes. |
-| [TableProof](https://github.com/eduard-s/table-proof) | Python audits for PDF table associations, with source evidence, an optional local vision model, and reproducible regression cases. |
-| [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Finds input, result, and error mismatches across MCP and AI SDK tool paths. It has Python and Node.js packages. |
+| [TinyTask](https://github.com/eduard-s/tiny-task) | Train local text classifiers and route uncertain requests to review. Measure accepted accuracy, coverage, and unknown acceptance with TF-IDF or SetFit. Python. |
+| [Nematic game](https://github.com/eduard-s/nematic-game) | Interactive 2D liquid crystal and material model with ions, fields, and local brushes. Reusable React component and web demo. TypeScript. |
+| [TableProof](https://github.com/eduard-s/table-proof) | Find suspected errors in extracted PDF tables with source evidence, HTML reports, and optional local vision models. Python. |
+| [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Find changes to AI tool arguments, results, and errors across MCP and agent framework boundaries. Python and Node.js. |
 | [Workflow engine: Python services](https://github.com/eduard-s/event-driven-workflow-orchestration-engine) | Runs parallel JSON workflows with an API, orchestrator, workers, PostgreSQL, and Redis Streams. |
 | [Workflow engine: Go monolith](https://github.com/eduard-s/event-driven-workflow-orchestration-engine-monolith) | Runs durable JSON workflows in one Go app with PostgreSQL, retries, and recovery. |
 | [Workflow engine: LangGraph monolith](https://github.com/eduard-s/event-driven-workflow-orchestration-engine-monolith-langgraph) | Runs JSON workflows with FastAPI and LangGraph. PostgreSQL stores state and checkpoints. |
