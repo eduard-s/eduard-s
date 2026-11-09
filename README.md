@@ -21,13 +21,39 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 | [Workflow engine: Python services](https://github.com/eduard-s/event-driven-workflow-orchestration-engine) | Runs parallel JSON workflows with an API, orchestrator, workers, PostgreSQL, and Redis Streams. |
 | [Workflow engine: Go monolith](https://github.com/eduard-s/event-driven-workflow-orchestration-engine-monolith) | Runs durable JSON workflows in one Go app with PostgreSQL, retries, and recovery. |
 | [Workflow engine: LangGraph monolith](https://github.com/eduard-s/event-driven-workflow-orchestration-engine-monolith-langgraph) | Runs JSON workflows with FastAPI and LangGraph. PostgreSQL stores state and checkpoints. |
-| [Skills](https://github.com/eduard-s/skills) | Reusable Markdown skills for AI assistants. The first skill examines evidence for everyday science questions. |
+| [Skills](https://github.com/eduard-s/skills) | Reusable Markdown skills for science research and controlled LLM experiments. Check everyday science evidence or test what changes a model's answer. |
 
 ## Use TinyTask
 
-[Source installation and demo](https://github.com/eduard-s/tiny-task#try-the-support-inbox) · [Comparison with Prompt2Model and SetFit](https://github.com/eduard-s/tiny-task/blob/main/docs/COMPARISON.md) · [MVP plan](https://github.com/eduard-s/tiny-task/blob/main/docs/MVP_PLAN.md)
+[Python on PyPI](https://pypi.org/project/tiny-task-py/) · [Support inbox demo](https://github.com/eduard-s/tiny-task#try-the-support-inbox) · [Comparison with Prompt2Model and SetFit](https://github.com/eduard-s/tiny-task/blob/main/docs/COMPARISON.md) · [MVP plan](https://github.com/eduard-s/tiny-task/blob/main/docs/MVP_PLAN.md)
 
-TinyTask is a source alpha. It trains a classifier for a stable label set and routes uncertain requests to review. Its acceptance report helps examine a local candidate before deployment.
+TinyTask is an alpha Python library. It trains a classifier for a stable label set and routes uncertain requests to review. Its acceptance report helps examine a local candidate before deployment.
+
+Use Python 3.11 or later in a virtual environment. Install the package, then run the offline demo.
+
+```sh
+python -m pip install tiny-task-py
+tiny-task demo --output tiny-task-demo
+tiny-task predict --model tiny-task-demo/model --text "Please cancel my subscription"
+```
+
+Open `tiny-task-demo/index.html` to examine the report. The demo trains, exports, and loads a local model without an API key or model download.
+
+The package also accepts a CSV inbox with `id` and `text` columns.
+
+```sh
+tiny-task predict --model tiny-task-demo/model --input inbox.csv --output predictions.jsonl
+```
+
+Use a new output path for each run. The small demo reports `needs_data` because its test set cannot support release approval.
+
+For the optional SetFit backend, install the neural dependencies:
+
+```sh
+python -m pip install 'tiny-task-py[neural]'
+```
+
+The Python import is `tiny_task`. Read the [training instructions](https://github.com/eduard-s/tiny-task#train-your-task) for your own label set and data.
 
 ## Use Nematic game
 
@@ -150,3 +176,26 @@ report.export_html("report.html", source_pdf="source.pdf")
 The CLI returns `0` for `no_findings`, `1` for suspected errors (`review`), `3` for missing or ambiguous evidence (`uncertain`), and `2` for an execution error. `no_findings` means the selected checks found no error; it does not prove semantic accuracy.
 
 To try it with supplied files, follow the [recorded regression case](https://github.com/eduard-s/table-proof#try-the-real-regression-case). The affected fixture reports two swapped row labels and exits with code `1`; the fixed control exits with code `0`.
+
+## Use AI skills
+
+[Science Research](https://github.com/eduard-s/skills/tree/main/skills/science-research) checks everyday science questions, with evidence notes and a separate report of personal experiences.
+
+[LLM Counterfactual Lab](https://github.com/eduard-s/skills/tree/main/skills/llm-counterfactual-lab) designs controlled experiments for evidence use, rule transfer, and LLM judge bias. Change decisive evidence and irrelevant cues independently, then score correct answer changes and stability together.
+
+```sh
+git clone --depth 1 https://github.com/eduard-s/skills.git ai-skills
+```
+
+Add the complete individual skill folder, including `references/`, to your assistant's supported skills location. Both skills are static Markdown. The [LLM Counterfactual Lab README](https://github.com/eduard-s/skills/blob/main/skills/llm-counterfactual-lab/README.md) explains its use and limits.
+
+Example request:
+
+```text
+Use llm-counterfactual-lab.
+Design a small experiment to test whether my document assistant follows
+the supplied evidence. Include changed-evidence and missing-evidence cases.
+I do not have a target model interface here.
+```
+
+The skill can design a protocol or analyze supplied responses without a model API. Its six-call worked example is unrun, and its response patterns are synthetic. Native imports and live target-model execution have not been tested for this skill.
