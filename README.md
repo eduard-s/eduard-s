@@ -57,9 +57,11 @@ python -m pip install 'tiny-task-py[neural]'
 
 The Python import is `tiny_task`. Read the [training instructions](https://github.com/eduard-s/tiny-task#train-your-task) for your own label set and data.
 
+The three science packages use the `@esmirnov.ai` npm scope.
+
 ## Use Nematic game
 
-[Open the lab](https://esmirnov.ai/nematic-game/) · [npm package](https://www.npmjs.com/package/nematic-game) · [Read the component API](https://github.com/eduard-s/nematic-game/blob/main/docs/API.md)
+[Open the lab](https://esmirnov.ai/nematic-game/) · [npm package](https://www.npmjs.com/package/@esmirnov.ai/nematic-game) · [Read the component API](https://github.com/eduard-s/nematic-game/blob/main/docs/API.md)
 
 Nematic game supplies a reusable React component and a standalone demo.
 Explore Liquid, Nematic, and Solid structures with ions, fields, and local brushes.
@@ -72,14 +74,14 @@ On narrow screens, the controls appear below it.
 Install the component in a React app.
 
 ```sh
-npm install nematic-game
+npm install @esmirnov.ai/nematic-game@0.3.1
 ```
 
 Import the component and its stylesheet.
 
 ```tsx
-import { NematicLab } from "nematic-game";
-import "nematic-game/styles.css";
+import { NematicLab } from "@esmirnov.ai/nematic-game";
+import "@esmirnov.ai/nematic-game/styles.css";
 
 <NematicLab
   initialMaterial={{ heat: 0.15, density: 0.65 }}
@@ -89,12 +91,12 @@ import "nematic-game/styles.css";
 
 The component supplies defaults for the other settings.
 Reset sample restores the initial configuration.
-Use `nematic-game/core` for the engine and canvas renderer without React.
+Use `@esmirnov.ai/nematic-game/core` for the engine and canvas renderer without React.
 You can change the source to add your own tools and visual effects.
 
 ## Use DNA damage lab
 
-[Open the lab](https://esmirnov.ai/dna-mutation-explorer/) · [npm package](https://www.npmjs.com/package/dna-mutation-explorer) · [Read the component API](https://github.com/eduard-s/dna-mutation-explorer/blob/main/docs/API.md)
+[Open the lab](https://esmirnov.ai/dna-mutation-explorer/) · [npm package](https://www.npmjs.com/package/@esmirnov.ai/dna-mutation-explorer) · [Read the component API](https://github.com/eduard-s/dna-mutation-explorer/blob/main/docs/API.md)
 
 Expose flexible DNA to UV, X-rays, heat, electric fields, or oxidants.
 Add antioxidants, filters, shields, and repair.
@@ -104,14 +106,14 @@ The model uses illustrative settings. It does not predict physical doses or heal
 Install the package in a React app.
 
 ```sh
-npm install dna-mutation-explorer
+npm install @esmirnov.ai/dna-mutation-explorer@0.4.1
 ```
 
 Import the component and its stylesheet.
 
 ```tsx
-import { DnaDamageLab } from "dna-mutation-explorer/react";
-import "dna-mutation-explorer/styles.css";
+import { DnaDamageLab } from "@esmirnov.ai/dna-mutation-explorer/react";
+import "@esmirnov.ai/dna-mutation-explorer/styles.css";
 
 <DnaDamageLab />
 ```
@@ -121,7 +123,7 @@ All sequence data stays in the browser.
 
 ## Use Sperm Lab
 
-[Open the lab](https://esmirnov.ai/sperm-lab/) · [npm package](https://www.npmjs.com/package/sperm-lab) · [Read the component API](https://github.com/eduard-s/sperm-lab/blob/main/docs/API.md)
+[Open the lab](https://esmirnov.ai/sperm-lab/) · [npm package](https://www.npmjs.com/package/@esmirnov.ai/sperm-lab) · [Read the component API](https://github.com/eduard-s/sperm-lab/blob/main/docs/API.md)
 
 Change 12 factors in one live sample.
 Inspect heads, tails, midpieces, DNA, and movement.
@@ -131,20 +133,20 @@ Its illustrative settings do not predict personal fertility.
 Install the package in a React app.
 
 ```sh
-npm install sperm-lab
+npm install @esmirnov.ai/sperm-lab@0.4.1
 ```
 
 Import the component and its stylesheet.
 
 ```tsx
-import { SpermLab } from "sperm-lab";
-import "sperm-lab/styles.css";
+import { SpermLab } from "@esmirnov.ai/sperm-lab";
+import "@esmirnov.ai/sperm-lab/styles.css";
 
 <SpermLab initialFactors={{ smoking: 0.5, heat: 0.3 }} />
 ```
 
 The component runs in the browser without a backend.
-Use `sperm-lab/core` for the simulation without React.
+Use `@esmirnov.ai/sperm-lab/core` for the simulation without React.
 
 ## Use ToolBoundary
 
