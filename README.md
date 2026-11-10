@@ -15,7 +15,7 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 | Repository | What it does |
 | --- | --- |
 | [TinyTask](https://github.com/eduard-s/tiny-task) | Train local text classifiers and route uncertain requests to review. Measure accepted accuracy, coverage, and unknown acceptance with TF-IDF or SetFit. Python. |
-| [Nematic game](https://github.com/eduard-s/nematic-game) | Interactive 2D liquid crystal and material model with ions, fields, and local brushes. Reusable React component and web demo. TypeScript. |
+| [Nematic game](https://github.com/eduard-s/nematic-game) | Explore liquid crystals, material structures, ions, fields, and local brushes. Browser demo and npm package. TypeScript. |
 | [DNA damage lab](https://github.com/eduard-s/dna-mutation-explorer) | Explore UV, X-rays, heat, electric fields, and oxidants. Add antioxidants, filters, and repair. Browser demo and npm package. TypeScript. |
 | [TableProof](https://github.com/eduard-s/table-proof) | Find suspected errors in extracted PDF tables with source evidence, HTML reports, and optional local vision models. Python. |
 | [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Find changes to AI tool arguments, results, and errors across MCP and agent framework boundaries. Python and Node.js. |
@@ -58,24 +58,27 @@ The Python import is `tiny_task`. Read the [training instructions](https://githu
 
 ## Use Nematic game
 
-[Open the lab](https://esmirnov.ai/nematic-game/) · [Read the component API](https://github.com/eduard-s/nematic-game/blob/main/docs/API.md)
+[Open the lab](https://esmirnov.ai/nematic-game/) · [npm package](https://www.npmjs.com/package/nematic-game) · [Read the component API](https://github.com/eduard-s/nematic-game/blob/main/docs/API.md)
 
 Nematic game supplies a reusable React component and a standalone demo.
-The field uses the full component width.
-The controls appear below the field.
+Explore Liquid, Nematic, and Solid structures with ions, fields, and local brushes.
 The model uses relative scales for play and explanation.
+
+On desktop, the field uses about 52% of the component width.
+The controls appear beside the field.
+On narrow screens, the controls appear below it.
 
 Install the component in a React app.
 
 ```sh
-npm install https://github.com/eduard-s/nematic-game/archive/refs/tags/v0.1.0.tar.gz
+npm install nematic-game
 ```
 
 Import the component and its stylesheet.
 
 ```tsx
-import { NematicLab } from "@eduard-s/nematic-game";
-import "@eduard-s/nematic-game/styles.css";
+import { NematicLab } from "nematic-game";
+import "nematic-game/styles.css";
 
 <NematicLab
   initialMaterial={{ heat: 0.15, density: 0.65 }}
@@ -85,6 +88,7 @@ import "@eduard-s/nematic-game/styles.css";
 
 The component supplies defaults for the other settings.
 Reset sample restores the initial configuration.
+Use `nematic-game/core` for the engine and canvas renderer without React.
 You can change the source to add your own tools and visual effects.
 
 ## Use DNA damage lab
