@@ -15,9 +15,9 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 | Repository | What it does |
 | --- | --- |
 | [TinyTask](https://github.com/eduard-s/tiny-task) | Train local text classifiers and route uncertain requests to review. Measure accepted accuracy, coverage, and unknown acceptance with TF-IDF or SetFit. Python. |
-| [Nematic game](https://github.com/eduard-s/nematic-game) | Explore liquid crystals, material structures, ions, fields, and local brushes. Browser demo and npm package. TypeScript. |
-| [DNA damage lab](https://github.com/eduard-s/dna-mutation-explorer) | Explore UV, X-rays, heat, electric fields, and oxidants. Add antioxidants, filters, and repair. Browser demo and npm package. TypeScript. |
-| [Sperm Lab](https://github.com/eduard-s/sperm-lab) | Explore sperm movement, anatomy, and DNA with 12 independent factors. Browser demo and npm package. TypeScript. |
+| [Nematic game](https://github.com/eduard-s/nematic-game) | Explore liquid crystals, material structures, ions, fields, and local brushes. TypeScript. [Demo](https://esmirnov.ai/nematic-game/) · [@esmirnov.ai/nematic-game on npm](https://www.npmjs.com/package/@esmirnov.ai/nematic-game). |
+| [DNA damage lab](https://github.com/eduard-s/dna-mutation-explorer) | Explore UV, X-rays, heat, electric fields, and oxidants. Add antioxidants, filters, and repair. TypeScript. [Demo](https://esmirnov.ai/dna-mutation-explorer/) · [@esmirnov.ai/dna-mutation-explorer on npm](https://www.npmjs.com/package/@esmirnov.ai/dna-mutation-explorer). |
+| [Sperm Lab](https://github.com/eduard-s/sperm-lab) | Explore sperm movement, anatomy, and DNA with 12 independent factors. TypeScript. [Demo](https://esmirnov.ai/sperm-lab/) · [@esmirnov.ai/sperm-lab on npm](https://www.npmjs.com/package/@esmirnov.ai/sperm-lab). |
 | [TableProof](https://github.com/eduard-s/table-proof) | Find suspected errors in extracted PDF tables with source evidence, HTML reports, and optional local vision models. Python. |
 | [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Find changes to AI tool arguments, results, and errors across MCP and agent framework boundaries. Python and Node.js. |
 | [Workflow engine: Python services](https://github.com/eduard-s/event-driven-workflow-orchestration-engine) | Runs parallel JSON workflows with an API, orchestrator, workers, PostgreSQL, and Redis Streams. |
