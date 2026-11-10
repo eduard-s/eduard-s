@@ -16,6 +16,7 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 | --- | --- |
 | [TinyTask](https://github.com/eduard-s/tiny-task) | Train local text classifiers and route uncertain requests to review. Measure accepted accuracy, coverage, and unknown acceptance with TF-IDF or SetFit. Python. |
 | [Nematic game](https://github.com/eduard-s/nematic-game) | Interactive 2D liquid crystal and material model with ions, fields, and local brushes. Reusable React component and web demo. TypeScript. |
+| [DNA damage lab](https://github.com/eduard-s/dna-mutation-explorer) | Explore UV, X-rays, heat, electric fields, and oxidants. Add antioxidants, filters, and repair. Browser demo and npm package. TypeScript. |
 | [TableProof](https://github.com/eduard-s/table-proof) | Find suspected errors in extracted PDF tables with source evidence, HTML reports, and optional local vision models. Python. |
 | [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Find changes to AI tool arguments, results, and errors across MCP and agent framework boundaries. Python and Node.js. |
 | [Workflow engine: Python services](https://github.com/eduard-s/event-driven-workflow-orchestration-engine) | Runs parallel JSON workflows with an API, orchestrator, workers, PostgreSQL, and Redis Streams. |
@@ -85,6 +86,33 @@ import "@eduard-s/nematic-game/styles.css";
 The component supplies defaults for the other settings.
 Reset sample restores the initial configuration.
 You can change the source to add your own tools and visual effects.
+
+## Use DNA damage lab
+
+[Open the lab](https://esmirnov.ai/dna-mutation-explorer/) · [npm package](https://www.npmjs.com/package/dna-mutation-explorer) · [Read the component API](https://github.com/eduard-s/dna-mutation-explorer/blob/main/docs/API.md)
+
+Expose flexible DNA to UV, X-rays, heat, electric fields, or oxidants.
+Add antioxidants, filters, shields, and repair.
+The atomic view shows electron excitation, ionization, and bond changes.
+The model uses illustrative settings. It does not predict physical doses or health effects.
+
+Install the package in a React app.
+
+```sh
+npm install dna-mutation-explorer
+```
+
+Import the component and its stylesheet.
+
+```tsx
+import { DnaDamageLab } from "dna-mutation-explorer/react";
+import "dna-mutation-explorer/styles.css";
+
+<DnaDamageLab />
+```
+
+The package also supplies a TypeScript engine without React.
+All sequence data stays in the browser.
 
 ## Use ToolBoundary
 
