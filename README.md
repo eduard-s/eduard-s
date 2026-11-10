@@ -17,6 +17,7 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 | [TinyTask](https://github.com/eduard-s/tiny-task) | Train local text classifiers and route uncertain requests to review. Measure accepted accuracy, coverage, and unknown acceptance with TF-IDF or SetFit. Python. |
 | [Nematic game](https://github.com/eduard-s/nematic-game) | Explore liquid crystals, material structures, ions, fields, and local brushes. Browser demo and npm package. TypeScript. |
 | [DNA damage lab](https://github.com/eduard-s/dna-mutation-explorer) | Explore UV, X-rays, heat, electric fields, and oxidants. Add antioxidants, filters, and repair. Browser demo and npm package. TypeScript. |
+| [Sperm Lab](https://github.com/eduard-s/sperm-lab) | Explore sperm movement, anatomy, and DNA with 12 independent factors. Browser demo and npm package. TypeScript. |
 | [TableProof](https://github.com/eduard-s/table-proof) | Find suspected errors in extracted PDF tables with source evidence, HTML reports, and optional local vision models. Python. |
 | [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Find changes to AI tool arguments, results, and errors across MCP and agent framework boundaries. Python and Node.js. |
 | [Workflow engine: Python services](https://github.com/eduard-s/event-driven-workflow-orchestration-engine) | Runs parallel JSON workflows with an API, orchestrator, workers, PostgreSQL, and Redis Streams. |
@@ -117,6 +118,33 @@ import "dna-mutation-explorer/styles.css";
 
 The package also supplies a TypeScript engine without React.
 All sequence data stays in the browser.
+
+## Use Sperm Lab
+
+[Open the lab](https://esmirnov.ai/sperm-lab/) · [npm package](https://www.npmjs.com/package/sperm-lab) · [Read the component API](https://github.com/eduard-s/sperm-lab/blob/main/docs/API.md)
+
+Change 12 factors in one live sample.
+Inspect heads, tails, midpieces, DNA, and movement.
+The model uses synthetic cells.
+Its illustrative settings do not predict personal fertility.
+
+Install the package in a React app.
+
+```sh
+npm install sperm-lab
+```
+
+Import the component and its stylesheet.
+
+```tsx
+import { SpermLab } from "sperm-lab";
+import "sperm-lab/styles.css";
+
+<SpermLab initialFactors={{ smoking: 0.5, heat: 0.3 }} />
+```
+
+The component runs in the browser without a backend.
+Use `sperm-lab/core` for the simulation without React.
 
 ## Use ToolBoundary
 
