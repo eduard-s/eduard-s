@@ -18,6 +18,8 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 | [Nematic game](https://github.com/eduard-s/nematic-game) | Explore liquid crystals, material structures, ions, fields, and local brushes. TypeScript. [Demo](https://esmirnov.ai/nematic-game/) · [@esmirnov.ai/nematic-game on npm](https://www.npmjs.com/package/@esmirnov.ai/nematic-game). |
 | [DNA damage lab](https://github.com/eduard-s/dna-mutation-explorer) | Explore UV, X-rays, heat, electric fields, and oxidants. Add antioxidants, filters, and repair. TypeScript. [Demo](https://esmirnov.ai/dna-mutation-explorer/) · [@esmirnov.ai/dna-mutation-explorer on npm](https://www.npmjs.com/package/@esmirnov.ai/dna-mutation-explorer). |
 | [Sperm Lab](https://github.com/eduard-s/sperm-lab) | Explore sperm movement, anatomy, and DNA with 12 independent factors. TypeScript. [Demo](https://esmirnov.ai/sperm-lab/) · [@esmirnov.ai/sperm-lab on npm](https://www.npmjs.com/package/@esmirnov.ai/sperm-lab). |
+| [Migraine Lab](https://github.com/eduard-s/migraine-lab) | Follow a simulated migraine in 2D from visual aura to nerve signaling. Compare drug binding and pain recovery across three runs on one clock. TypeScript. [Demo](https://esmirnov.ai/migraine-lab/) · [@esmirnov.ai/migraine-lab on npm](https://www.npmjs.com/package/@esmirnov.ai/migraine-lab). |
+| [Cell Stress Lab](https://github.com/eduard-s/cell-stress-lab) | Apply stress to a model cell and watch it repair DNA and refold proteins. Choose responses to help it recover in a rescue challenge. TypeScript. [Demo](https://esmirnov.ai/cell-stress-lab/) · [@esmirnov.ai/cell-stress-lab on npm](https://www.npmjs.com/package/@esmirnov.ai/cell-stress-lab). |
 | [TableProof](https://github.com/eduard-s/table-proof) | Find suspected errors in extracted PDF tables with source evidence, HTML reports, and optional local vision models. Python. |
 | [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Find changes to AI tool arguments, results, and errors across MCP and agent framework boundaries. Python and Node.js. |
 | [Workflow engine: Python services](https://github.com/eduard-s/event-driven-workflow-orchestration-engine) | Runs parallel JSON workflows with an API, orchestrator, workers, PostgreSQL, and Redis Streams. |
@@ -57,7 +59,7 @@ python -m pip install 'tiny-task-py[neural]'
 
 The Python import is `tiny_task`. Read the [training instructions](https://github.com/eduard-s/tiny-task#train-your-task) for your own label set and data.
 
-The three science packages use the `@esmirnov.ai` npm scope.
+The science packages use the `@esmirnov.ai` npm scope.
 
 ## Use Nematic game
 
