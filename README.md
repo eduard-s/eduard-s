@@ -22,6 +22,7 @@ In my free time, I explore liquid crystals and molecular self-assembly.
 | [Cell Stress Lab](https://github.com/eduard-s/cell-stress-lab) | Apply stress to a model cell and watch it repair DNA and refold proteins. Choose responses to help it recover in a rescue challenge. TypeScript. [Demo](https://esmirnov.ai/cell-stress-lab/) · [@esmirnov.ai/cell-stress-lab on npm](https://www.npmjs.com/package/@esmirnov.ai/cell-stress-lab). |
 | [TableProof](https://github.com/eduard-s/table-proof) | Find suspected errors in extracted PDF tables with source evidence, HTML reports, and optional local vision models. Python. |
 | [ToolBoundary](https://github.com/eduard-s/tool-boundary) | Find changes to AI tool arguments, results, and errors across MCP and agent framework boundaries. Python and Node.js. |
+| [Agent Stress Lab](https://github.com/eduard-s/agent-stress-lab) | Run fault and regression tests against existing agents. Grade observed state after tool errors, input attacks, and worker crashes. Python. [PyPI](https://pypi.org/project/agent-stress-lab/). |
 | [Workflow engine: Python services](https://github.com/eduard-s/event-driven-workflow-orchestration-engine) | Runs parallel JSON workflows with an API, orchestrator, workers, PostgreSQL, and Redis Streams. |
 | [Workflow engine: Go monolith](https://github.com/eduard-s/event-driven-workflow-orchestration-engine-monolith) | Runs durable JSON workflows in one Go app with PostgreSQL, retries, and recovery. |
 | [Workflow engine: LangGraph monolith](https://github.com/eduard-s/event-driven-workflow-orchestration-engine-monolith-langgraph) | Runs JSON workflows with FastAPI and LangGraph. PostgreSQL stores state and checkpoints. |
@@ -240,6 +241,31 @@ report.export_html("report.html", source_pdf="source.pdf")
 The CLI returns `0` for `no_findings`, `1` for suspected errors (`review`), `3` for missing or ambiguous evidence (`uncertain`), and `2` for an execution error. `no_findings` means the selected checks found no error; it does not prove semantic accuracy.
 
 To try it with supplied files, follow the [recorded regression case](https://github.com/eduard-s/table-proof#try-the-real-regression-case). The affected fixture reports two swapped row labels and exits with code `1`; the fixed control exits with code `0`.
+
+## Use Agent Stress Lab
+
+[Python on PyPI](https://pypi.org/project/agent-stress-lab/) · [Target protocol](https://github.com/eduard-s/agent-stress-lab/blob/main/docs/harness-protocol.md) · [Refund fixture](https://github.com/eduard-s/agent-stress-lab/tree/main/examples/refund)
+
+Agent Stress Lab calls an agent that you supply. It inserts input and tool faults, kills a worker after a tool effect, and records the final state. An independent auditor can report safety findings. The CLI writes JSON, HTML, and JUnit reports. It needs no web server or OpenAI key.
+
+Install the package in a Python 3.12 or newer environment.
+
+```sh
+python -m pip install agent-stress-lab
+asl --help
+```
+
+Get the repository to run its fixture suite.
+
+```sh
+git clone https://github.com/eduard-s/agent-stress-lab.git
+cd agent-stress-lab
+asl run --target examples/refund/target.toml \
+  --suite examples/refund/suite.yaml --output refund.json \
+  --html refund.html --junit refund.xml
+```
+
+The fixture has fixed rules. It covers approval, denial, false approval, and crash recovery. Its results show how the harness works. They do not measure a model.
 
 ## Use AI skills
 
