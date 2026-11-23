@@ -151,6 +151,14 @@ import "@esmirnov.ai/sperm-lab/styles.css";
 The component runs in the browser without a backend.
 Use `@esmirnov.ai/sperm-lab/core` for the simulation without React.
 
+## Use Cancer Lab
+
+Cancer Lab compares exposure histories for eight cancer types with 20 factors. Each factor has its own unit and change date.
+
+For example, select **Lung** to compare indoor radon in Bq/m³ with outdoor fine particles in µg/m³. Set the current and planned values for both factors. Move the tissue clock to see how much exposure each plan adds.
+
+To examine tumor growth, enter the volumes from three scans and the time between scans. The lab calculates how the measured growth rate changed.
+
 ## Use ToolBoundary
 
 [Python on PyPI](https://pypi.org/project/tool-boundary-py/) · [Node.js on npm](https://www.npmjs.com/package/@esmirnov.ai/tool-boundary) · [Examples and explanation](https://esmirnov.ai/blog/tool-boundary/)
