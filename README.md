@@ -153,6 +153,8 @@ Use `@esmirnov.ai/sperm-lab/core` for the simulation without React.
 
 ## Use Cancer Lab
 
+[Open the lab](https://esmirnov.ai/cancer-lab/) · [Model guide and sources](https://esmirnov.ai/packages/cancer-lab/docs/MODEL.md)
+
 Cancer Lab compares exposure histories for eight cancer types with 20 factors. Each factor has its own unit and change date.
 
 For example, select **Lung** to compare indoor radon in Bq/m³ with outdoor fine particles in µg/m³. Set the current and planned values for both factors. Move the tissue clock to see how much exposure each plan adds.
